@@ -3,3 +3,5 @@ This is my dwm build.
 Patches: 
 1. dwm-refreshrate-20230826-9554a10 Disables 60fps cap on resizing windows.
         https://dwm.suckless.org/patches/refreshrate/
+2. dwm-swallow-6.3 "Swallows" programs opened in terminal.
+        https://dwm.suckless.org/patches/swallow/
