@@ -1,6 +1,0 @@
-# Ignore compiled binaries
-drw.o
-dwm
-dwm.o
-util.o
-patches
