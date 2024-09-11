@@ -1,7 +1,9 @@
 This is my dwm build.
 
-Patches: 
-1. dwm-refreshrate-20230826-9554a10 Disables 60fps cap on resizing windows.
-        https://dwm.suckless.org/patches/refreshrate/
-2. dwm-swallow-6.3 "Swallows" programs opened in terminal.
-        https://dwm.suckless.org/patches/swallow/
+Patches included: 
+1. dwm-refreshrate-20230826-9554a10 https://dwm.suckless.org/patches/refreshrate/
+        This patch removes the resize/move limitation introduced in commit 3d1090ba896319368c4771b88d325fcee368a608.
+
+2. dwm-swallow-6.3 https://dwm.suckless.org/patches/swallow/
+        This patch adds "window swallowing" to dwm as known from Plan 9's windowing system rio.
+        
