@@ -18,8 +18,8 @@ static const char col_cyan[]        = "#005577";
 //	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 //};
 
-//#include "/home/f0x/Documents/Themes/default_dwm.h" //Default theme
-#include "/home/f0x/Documents/Themes/nord_dwm.h" //Custom Nord theme
+#include "/home/f0x/Documents/Themes/default_dwm.h" //Default theme
+//#include "/home/f0x/Documents/Themes/nord_dwm.h" //Custom theme
 //#include "/home/f0x/.cache/wal/colors-wal-dwm.h" //Pywall theme
 
 /* tagging */
@@ -74,8 +74,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+//	{ MODKEY,|ShiftMask,            XK_i,      incnmaster,     {.i = +1 } },
+//	{ MODKEY,|ShiftMask,            XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
