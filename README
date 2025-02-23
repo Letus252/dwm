@@ -1,9 +1,14 @@
 This is my dwm build.
 
-Patches included: 
+Patches included:
 1. dwm-refreshrate-20230826-9554a10 https://dwm.suckless.org/patches/refreshrate/
         This patch removes the resize/move limitation introduced in commit 3d1090ba896319368c4771b88d325fcee368a608.
 
 2. dwm-swallow-6.3 https://dwm.suckless.org/patches/swallow/
         This patch adds "window swallowing" to dwm as known from Plan 9's windowing system rio.
-        
+
+3. dwm-actualfullscreen https://dwm.suckless.org/patches/actualfullscreen/
+        Adds ability to toggle fullscreen.
+
+TODO:
+1. Ignore all execept fullscreen keybinds in fullscreen mode.

@@ -4,3 +4,4 @@ dwm
 dwm.o
 patches
 util.o
+*.rej
