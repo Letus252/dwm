@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -103,7 +105,30 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+
+// Custom keybinds
+    { 0,                            XK_Print,                spawn, SHCMD("flameshot full") },
+    { ControlMask,                  XK_Print,                spawn, SHCMD("flameshot gui") },
+    { MODKEY|ControlMask,           XK_Escape,               spawn, SHCMD("xkill") },
+    { Mod4Mask         ,            XK_l,                    spawn, SHCMD("slock") },
+    { ControlMask|Mod4Mask,         XK_l,                    spawn, SHCMD("systemctl suspend") },
+    { ControlMask|Mod4Mask,         XK_r,                    spawn, SHCMD("shutdown -r now") },
+    { ControlMask|Mod4Mask,         XK_t,                    spawn, SHCMD("shutdown now") },
+    { Mod4Mask,                     XK_e,                    spawn, SHCMD("dolphin") },
+    { 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer set Master 5%+") },
+    { 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 5%-") },
+    { 0,                            XF86XK_AudioMute,        spawn, SHCMD("amixer set Master toggle") },
+    { 0,                            XF86XK_AudioPause,       spawn, SHCMD("playerctl play-pause") },
+    { 0,                            XF86XK_AudioPlay,        spawn, SHCMD("playerctl play-pause") },
+    { 0,                            XF86XK_AudioPrev,        spawn, SHCMD("playerctl previous") },
+    { 0,                            XF86XK_AudioNext,        spawn, SHCMD("playerctl next") },
+    { 0,                            XF86XK_Tools,            spawn, SHCMD("pavucontrol") },
+    { ControlMask,                  XK_KP_Up,                spawn, SHCMD("'/home/f0x/Documents/Bash Scripts/SpotifyVolumeUp.sh'") },
+    { ControlMask,                  XK_KP_Down,              spawn, SHCMD("'/home/f0x/Documents/Bash Scripts/SpotifyVolumeDown.sh'") },
+
 };
+
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
