@@ -113,8 +113,8 @@ static const Key keys[] = {
     { MODKEY|ControlMask,           XK_Escape,               spawn, SHCMD("xkill") },
     { Mod4Mask         ,            XK_l,                    spawn, SHCMD("slock") },
     { ControlMask|Mod4Mask,         XK_l,                    spawn, SHCMD("systemctl suspend") },
-    { ControlMask|Mod4Mask,         XK_r,                    spawn, SHCMD("shutdown -r now") },
-    { ControlMask|Mod4Mask,         XK_t,                    spawn, SHCMD("shutdown now") },
+    { ControlMask|Mod4Mask,         XK_r,                    spawn, SHCMD("pgrep pacman > /dev/null && echo \"Pacman is currently running. Shutdown aborted.\" || { echo \"Shutting down now.\"; shutdown -r now; }") },
+    { ControlMask|Mod4Mask,         XK_t,                    spawn, SHCMD("pgrep pacman > /dev/null && echo \"Pacman is currently running. Shutdown aborted.\" || { echo \"Shutting down now.\"; shutdown now; }") },
     { Mod4Mask,                     XK_e,                    spawn, SHCMD("dolphin") },
     { 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer set Master 5%+") },
     { 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 5%-") },
@@ -124,8 +124,8 @@ static const Key keys[] = {
     { 0,                            XF86XK_AudioPrev,        spawn, SHCMD("playerctl previous") },
     { 0,                            XF86XK_AudioNext,        spawn, SHCMD("playerctl next") },
     { 0,                            XF86XK_Tools,            spawn, SHCMD("pavucontrol") },
-    { ControlMask,                  XK_KP_Up,                spawn, SHCMD("'/home/f0x/Documents/Bash Scripts/SpotifyVolumeUp.sh'") },
-    { ControlMask,                  XK_KP_Down,              spawn, SHCMD("'/home/f0x/Documents/Bash Scripts/SpotifyVolumeDown.sh'") },
+    { ControlMask,                  XK_Up,                   spawn, SHCMD("/home/f0x/Documents/Bash_Scripts/SpotifyVolumeUp.sh") },
+    { ControlMask,                  XK_Down,                 spawn, SHCMD("/home/f0x/Documents/Bash_Scripts/SpotifyVolumeDown.sh") },
 
 };
 
